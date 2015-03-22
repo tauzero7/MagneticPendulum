@@ -1,0 +1,111 @@
+## ---------------------------------------------------------
+##   MPSim
+##  
+##  Copyright (c) 2014  Thomas Mueller
+##
+##                      Visualization Research Center (VISUS)
+##                      Collaborative Research Center (SFB 716)
+##                      University of Stuttgart
+##                      Allmandring 19
+##                      70569 Stuttgart, Germany
+##
+## ---------------------------------------------------------
+
+Content:
+--------
+* Installation
+* Quick usage guide
+
+
+==============================================================
+
+Installation:
+-------------
+You need Qt 4.8 installed. 
+
+Please note that it might not work with Qt 5.X.
+
+1.) Open mpsim_viewer.pro in QtCreator.
+    In the "Projects"-Tab -> "Build Settings" deselect
+	"Shadow build" for debug and release!
+	
+2.) Adjust mpsim_viewer.pro file
+
+    -) If compute shader is available you can include
+        DEFINES+=HAVE_COMP_SHADER
+
+    -) To have access to all parameters include
+        DEFINES+=EXPERT_MODE
+
+3.) qmake
+
+4.) make
+
+5.) Windows only:
+    To start MPSim via double-klick, you first have to copy
+    the following files from your Qt bin-folder into the current
+	folder where MPSim.exe is:
+	  QtGui4.dll QtCore4.dll QtOpenGL4.dll 
+	or you have to adjust your PATH variable to include the Qt
+	bin-folder.
+
+==============================================================
+
+Quick usage guide:
+------------------
+When starting MPSim the "View2D" visualization is selected.
+
+* Mouse control in the "View2D" window:
+    - left button:  start trajectory
+    - mid button:   clear trajectory
+    - right button: move magnet
+
+* The line width and the line color can be set within the 
+  "Trajectory" window. The length of the trajectory is determined
+  by the number of integration steps 
+
+* If you press the play button (Ctrl+p) in the "Control" window, 
+  the "magnet map" will be calculated. Each pixel of this map 
+  represents an initial position of the pendulum bob and is
+  colored corresponding to the magnet the pendulum bob will be
+  attracted. This might take a few seconds.
+  The longer the pendulum bob needs to reach its final position,
+  the darker the color will be (controled via "TScale").
+  Set TScale=0 to disable this temporal coloring.
+
+* The position of a magnet (posX,posY) as well as its strength
+  (alpha) and its color can be set also in the "Magnets" window.
+  Please note that the magnet ID starts with '0'.
+  The number of magnets can only be changed by means of a
+  parameter file, see "config" folder.
+
+* The damping factor of the pendulum can be set within the
+  "Pendulum" window (default value: 1.0). 
+  Here, you can also set the maximum elongation of the pendulum
+  in degree (maxTheta, default value: 5.0).
+
+
+* You can toggle between 2D- or 3D-view either by selecting
+  the corresponding tab or by pressing Ctrl-1 or Ctrl-2, 
+  respectively.
+
+* Mouse control in the "View3D" window:
+    - left button:   move around point-of-interest (POI)
+    - mid button:    move POI along the z-axis
+    - right button:  zoom in/out    
+    - button + SHIFT:  move magnet or pendulum bob 
+
+* Press 'i' within the "View3D" window to reset the view.
+
+* Press the play button (Ctrl+a) in the "Animate" window to 
+  animate the pendulum bob.
+  
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+NOTE: 
+If you move a magnet or change one of its parameters or you 
+resize the window, press |<< in the "Control" window before 
+restarting the calculation of the "magnet map".
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+

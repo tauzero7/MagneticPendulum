@@ -1,0 +1,60 @@
+# http://qt-project.org/doc/qt-4.8/stylesheet-syntax.html
+# http://www.trinitydesktop.org/docs/qt4/stylesheet-examples.html
+
+#QLabel { font-family: monospace;}
+
+QLineEdit { background-color: white;
+            height: 16px;
+            font-family: monospace;
+            font-size: 12px
+} 
+
+QTextEdit { background-color: #ffffff;
+            font-family: Courier;
+            font-size: 12px
+}
+
+QPushButton { height: 14px;
+              font-family: monospace;
+}
+
+
+QComboBox { height: 16px;
+            font-family: monospace;
+}
+
+QSpinBox { background-color: #ffffee;
+           height: 24px;
+           font-family: monospace;
+}
+
+QDoubleSpinBox { background-color: #ff0000;
+                 height: 24px
+}
+
+
+QDockWidget::title { background-color: #d4cbc3;
+                     border-style: outset;
+                     border-width: 1px;
+                     border-color: #ffffff;
+}
+
+QMainWindow::separator {
+    background: #aaaaaa;
+    width: 3px;
+}
+
+#QMainWindow::separator:hover { background: red; }
+
+DoubleEdit { background-color: #ffffdd;
+             height: 16px
+}
+
+QStatusBar { background-color: #d4cbc3; }
+
+#QMenuBar::item:pressed { background: #0000ff; }
+#QMenu::item:selected { background: #0000ff; }
+
+#QMenu::indicator:checked { color: #3333ff; }
+
+QMessageBox { font-family: monospace; }

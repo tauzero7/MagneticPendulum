@@ -1,0 +1,16 @@
+
+# directories
+.svn
+compiled
+config
+doc
+lib
+test
+
+# files
+Makefile
+MPSim
+*.bat
+*.png
+*.sh
+

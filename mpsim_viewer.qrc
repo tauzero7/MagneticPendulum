@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="exit.png">resources/application-exit.png</file>
+        <file alias="open.png">resources/document-open.png</file>
+        <file alias="save.png">resources/document-save.png</file>
+        <file alias="html.png">resources/document.png</file>
+        <file alias="display.png">resources/display.png</file>
+        <file alias="check.png">resources/check.png</file>
+        <file alias="viewer.css">resources/viewer.css</file>
+        <file alias="clear.png">resources/edit-clear.png</file>
+        <file alias="pause.png">resources/media-playback-pause.png</file>
+        <file alias="play.png">resources/media-playback-start.png</file>
+        <file alias="step.png">resources/media-skip-forward.png</file>
+        <file alias="back.png">resources/media-skip-backward.png</file>
+    </qresource>
+</RCC>

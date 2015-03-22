@@ -1,0 +1,10 @@
+pendulumHeight 2.02
+pendulumLength 2
+gravity 9.81
+damping 1
+magFactor 0.01
+maxTheta 5
+
+magnet -0.06422 -0.0516054 1 0 0 1
+magnet 0.0741588 -0.0240825 0 1 0 1
+magnet 0 0.0424264 0 0 1 1
